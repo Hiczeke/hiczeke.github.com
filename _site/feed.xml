@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 18 Mar 2016 01:48:40 +0800</pubDate>
-    <lastBuildDate>Fri, 18 Mar 2016 01:48:40 +0800</lastBuildDate>
+    <pubDate>Fri, 18 Mar 2016 01:51:23 +0800</pubDate>
+    <lastBuildDate>Fri, 18 Mar 2016 01:51:23 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -50,8 +50,7 @@ here&lt;/p&gt;
 
 &lt;p&gt;Such a long way down it’s a long way down it’s a long way down&lt;/p&gt;
 
-&lt;p&gt;Check out the [iTunes][itunes] for more info on how to get the songs.
-[itunes]: http://www.apple.com/cn/itunes/download/&lt;/p&gt;
+&lt;p&gt;Check out the &lt;a href=&quot;http://www.apple.com/cn/itunes/download/&quot;&gt;iTunes&lt;/a&gt; for more info on how to get the songs.&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 18 Mar 2016 01:01:49 +0800</pubDate>
