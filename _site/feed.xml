@@ -5,8 +5,8 @@
     <description>Just for fun</description>
     <link>http://hiczeke.com/</link>
     <atom:link href="http://hiczeke.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 19 Mar 2016 21:40:19 +0800</pubDate>
-    <lastBuildDate>Sat, 19 Mar 2016 21:40:19 +0800</lastBuildDate>
+    <pubDate>Sat, 19 Mar 2016 21:48:34 +0800</pubDate>
+    <lastBuildDate>Sat, 19 Mar 2016 21:48:34 +0800</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -167,7 +167,7 @@
 
 &lt;p&gt;让我们看看 Node 中的实现：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// 由于 Node 原生支持模块的作用域，并不需要额外的 wrapper
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 由于 Node 原生支持模块的作用域，并不需要额外的 wrapper
 // &quot;as though the module was wrapped in a function&quot;
 
 var a = require(&#39;./a&#39;)  // 加载模块（同步加载）
@@ -177,8 +177,9 @@ exports.b = function(){ // 暴露 b 函数接口
   // do something
 }
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;&lt;code&gt;exports&lt;/code&gt;是一个内置对象，就像&lt;code&gt;require&lt;/code&gt;是一个内置加载函数一样。如果你希望直接赋值一个完整的对象或者构造函数，覆写&lt;code&gt;module.exports&lt;/code&gt;就可以了。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;exports&lt;/code&gt;是一个内置对象，就像&lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt;是一个内置加载函数一样。如果你希望直接赋值一个完整的对象或者构造函数，覆写&lt;code class=&quot;highlighter-rouge&quot;&gt;module.exports&lt;/code&gt;就可以了。&lt;/p&gt;
 
 &lt;p&gt;CommonJS 前身叫 ServerJS ，&lt;strong&gt;后来希望能更加 COMMON，成为通吃各种环境的模块规范，改名为 CommonJS&lt;/strong&gt; 。CommonJS 最初只专注于 Server-side 而非浏览器环境，因此它采用了同步加载的机制，这对服务器环境（硬盘 I/O 速度）不是问题，而对浏览器环境（网速）来说并不合适。&lt;/p&gt;
 
@@ -215,7 +216,7 @@ exports.b = function(){ // 暴露 b 函数接口
   &lt;li&gt;&lt;strong&gt;Modules/2.0&lt;/strong&gt; 流派。这个观点觉得浏览器有自身的特征，不应该直接用 Modules/1.x 规范，但应该尽可能与 Modules/1.x 规范保持一致。这个观点下的典型代表是 BravoJS 和 FlyScript 的作者。BravoJS 作者对 CommonJS 的社区的贡献很大，这份 Modules/2.0-draft 规范花了很多心思。FlyScript 的作者提出了 Modules/Wrappings 规范，这规范是 CMD 规范的前身。可惜的是 BravoJS 太学院派，FlyScript 后来做了自我阉割，将整个网站（flyscript.org）下线了。这个观点在本文中的典型代表就是 SeaJS 和 CMD 了&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;补一嘴：阿里 KISSY 的 KMD 其实跟 AMD 非常类似，只是用 &lt;code&gt;add&lt;/code&gt;和&lt;code&gt;use&lt;/code&gt; 两个源自于 YUI Modules 的函数名替换了 &lt;code&gt;define&lt;/code&gt; 和 &lt;code&gt;require&lt;/code&gt; ，但其原理更接近 RequireJS ，与 YUI Modules 的 &lt;code&gt;Y&lt;/code&gt; 沙箱 Attach 机制并不相同&lt;/p&gt;
+&lt;p&gt;补一嘴：阿里 KISSY 的 KMD 其实跟 AMD 非常类似，只是用 &lt;code class=&quot;highlighter-rouge&quot;&gt;add&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;use&lt;/code&gt; 两个源自于 YUI Modules 的函数名替换了 &lt;code class=&quot;highlighter-rouge&quot;&gt;define&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt; ，但其原理更接近 RequireJS ，与 YUI Modules 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Y&lt;/code&gt; 沙箱 Attach 机制并不相同&lt;/p&gt;
 
 &lt;h2 id=&quot;requirejs--amd&quot;&gt;RequireJS &amp;amp; AMD&lt;/h2&gt;
 
@@ -227,7 +228,7 @@ exports.b = function(){ // 暴露 b 函数接口
 
 &lt;p&gt;RequireJS 主要解决的还是 CommonJS 同步加载脚本不适合浏览器 这个问题：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;//CommonJS
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//CommonJS
 
 var Employee = require(&quot;types/Employee&quot;);
 
@@ -240,13 +241,14 @@ Programmer.prototype = new Employee();
 //如果 require call 是异步的，那么肯定 error
 //因为在执行这句前 Employee 模块肯定来不及加载进来
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;blockquote&gt;
   &lt;p&gt;As the comment indicates above, if require() is async, this code will not work. However, loading scripts synchronously in the browser kills performance. So, what to do?&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;所以我们需要 &lt;strong&gt;Function Wrapping&lt;/strong&gt; 来获取依赖并且提前通过 script tag 提前加载进来&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;//AMD Wrapper
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//AMD Wrapper
 
 define(
     [types/Employee],    //依赖
@@ -261,27 +263,30 @@ define(
     }
 )
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;当依赖模块非常多时，这种&lt;strong&gt;依赖前置&lt;/strong&gt;的写法会显得有点奇怪，所以 AMD 给了一个语法糖， &lt;strong&gt;simplified CommonJS wrapping&lt;/strong&gt;，借鉴了 CommonJS 的 require 就近风格，也更方便对 CommonJS 模块的兼容：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;define(function (require) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define(function (require) {
     var dependency1 = require(&#39;dependency1&#39;),
         dependency2 = require(&#39;dependency2&#39;);
 
     return function () {};
 });
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The AMD loader will parse out the &lt;code&gt;require(&#39;&#39;)&lt;/code&gt; calls by using &lt;code&gt;Function.prototype.toString()&lt;/code&gt;, then internally convert the above define call into this:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The AMD loader will parse out the &lt;code class=&quot;highlighter-rouge&quot;&gt;require(&#39;&#39;)&lt;/code&gt; calls by using &lt;code class=&quot;highlighter-rouge&quot;&gt;Function.prototype.toString()&lt;/code&gt;, then internally convert the above define call into this:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;define([&#39;require&#39;, &#39;dependency1&#39;, &#39;dependency2&#39;], function (require) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define([&#39;require&#39;, &#39;dependency1&#39;, &#39;dependency2&#39;], function (require) {
     var dependency1 = require(&#39;dependency1&#39;),
         dependency2 = require(&#39;dependency2&#39;);
 
     return function () {};
 });
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;出于&lt;code&gt;Function.prototype.toString()&lt;/code&gt;兼容性和性能的考虑，最好的做法还是做一次 &lt;strong&gt;optimized build&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;出于&lt;code class=&quot;highlighter-rouge&quot;&gt;Function.prototype.toString()&lt;/code&gt;兼容性和性能的考虑，最好的做法还是做一次 &lt;strong&gt;optimized build&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;AMD 和 CommonJS 的核心争议如下：&lt;/p&gt;
 
@@ -289,17 +294,19 @@ define(
 
 &lt;p&gt;Modules/1.0:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var a = require(&quot;./a&quot;) // 执行到此时，a.js 才同步下载并执行
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var a = require(&quot;./a&quot;) // 执行到此时，a.js 才同步下载并执行
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;AMD: （使用 require 的语法糖时）&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;define([&quot;require&quot;],function(require)){
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define([&quot;require&quot;],function(require)){
     // 在这里，a.js 已经下载并且执行好了
     // 使用 require() 并不是 AMD 的推荐写法
     var a = require(&quot;./a&quot;) // 此处仅仅是取模块 a 的 exports
 })
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;AMD 里提前下载 a.js 是出于对浏览器环境的考虑，只能采取异步下载，这个社区都认可（Sea.js 也是这么做的）&lt;/p&gt;
 
@@ -307,26 +314,28 @@ define(
 
 &lt;h3 id=&quot;section-1&quot;&gt;2. &lt;strong&gt;书写风格&lt;/strong&gt;&lt;/h3&gt;
 
-&lt;p&gt;AMD 推荐的风格并不使用&lt;code&gt;require&lt;/code&gt;，而是通过参数传入，破坏了&lt;strong&gt;依赖就近&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;AMD 推荐的风格并不使用&lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt;，而是通过参数传入，破坏了&lt;strong&gt;依赖就近&lt;/strong&gt;：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;define([&quot;a&quot;, &quot;b&quot;, &quot;c&quot;],function(a, b, c){
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define([&quot;a&quot;, &quot;b&quot;, &quot;c&quot;],function(a, b, c){
     // 提前申明了并初始化了所有模块
 
     true || b.foo(); //即便根本没用到模块 b，但 b 还是提前执行了。
 })
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;不过，在笔者看来，风格喜好因人而异，主要还是&lt;strong&gt;预执行&lt;/strong&gt;和&lt;strong&gt;懒执行&lt;/strong&gt;的差异。&lt;/p&gt;
 
 &lt;p&gt;另外，require 2.0 也开始思考异步处理&lt;strong&gt;软依赖&lt;/strong&gt;（区别于一定需要的&lt;strong&gt;硬依赖&lt;/strong&gt;）的问题，提出了这样的方案：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// 函数体内：
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 函数体内：
 if(status){
     async([&#39;a&#39;],function(a){
         a.doSomething()
     })
 }
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;seajs--cmd&quot;&gt;SeaJS &amp;amp; CMD&lt;/h2&gt;
 
@@ -346,19 +355,19 @@ if(status){
 &lt;p&gt;CMD 主要有 define, factory, require, export 这么几个东西&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;define &lt;code&gt;define(id?, deps?, factory)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;factory &lt;code&gt;factory(require, exports, module)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;require &lt;code&gt;require(id)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;exports &lt;code&gt;Object&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;define &lt;code class=&quot;highlighter-rouge&quot;&gt;define(id?, deps?, factory)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;factory &lt;code class=&quot;highlighter-rouge&quot;&gt;factory(require, exports, module)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;require &lt;code class=&quot;highlighter-rouge&quot;&gt;require(id)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;exports &lt;code class=&quot;highlighter-rouge&quot;&gt;Object&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;CMD 推荐的 Code Style 是使用 CommonJS 风格的 &lt;code&gt;require&lt;/code&gt;：&lt;/p&gt;
+&lt;p&gt;CMD 推荐的 Code Style 是使用 CommonJS 风格的 &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt;：&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;这个 require 实际上是一个全局函数，用于加载模块，这里实际就是传入而已&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;define(function(require, exports) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define(function(require, exports) {
 
     // 获取模块 a 的接口
     var a = require(&#39;./a&#39;);
@@ -372,10 +381,11 @@ if(status){
 
 });
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;但是你也可以使用 AMD 风格，或者使用 return 来进行模块暴露&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;define(&#39;hello&#39;, [&#39;jquery&#39;], function(require, exports, module) {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define(&#39;hello&#39;, [&#39;jquery&#39;], function(require, exports, module) {
 
     // 模块代码...
 
@@ -387,6 +397,7 @@ if(status){
 
 });
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Sea.js 借鉴了 RequireJS 的不少东西，比如将 FlyScript 中的 module.declare 改名为 define 等。Sea.js 更多地来自 Modules/2.0 的观点，但尽可能去掉了学院派的东西，加入了不少实战派的理念。&lt;/p&gt;
 
@@ -404,7 +415,7 @@ if(status){
 
 &lt;p&gt;看代码：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// AMD 默认推荐
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// AMD 默认推荐
 
 define([&#39;./a&#39;, &#39;./b&#39;], function(a, b) {  // 依赖前置，提前执行
 
@@ -414,8 +425,9 @@ define([&#39;./a&#39;, &#39;./b&#39;], function(a, b) {  // 依赖前置，提�
 })
 
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;pre&gt;&lt;code&gt;// CMD
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// CMD
 
 define(function(require, exports, module) {
 
@@ -426,6 +438,7 @@ define(function(require, exports, module) {
     b.doSomething()
 })
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;webpack&quot;&gt;WebPack&lt;/h2&gt;
 
@@ -785,13 +798,13 @@ Android’s source code is released by Google under open source licenses, althou
 
 &lt;p&gt;大的 Jekyll 主题上直接 fork 了 Clean Blog（这个主题也相当有名，就不多赘述了。唯一的缺点大概就是没有标签支持，于是我给它补上了。）&lt;/p&gt;
 
-&lt;p&gt;本地调试环境需要 &lt;code&gt;gem install jekyll&lt;/code&gt;，结果 rubygem 的源居然被墙了……后来手动改成了我大淘宝的镜像源才成功&lt;/p&gt;
+&lt;p&gt;本地调试环境需要 &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install jekyll&lt;/code&gt;，结果 rubygem 的源居然被墙了……后来手动改成了我大淘宝的镜像源才成功&lt;/p&gt;
 
 &lt;p&gt;Theme 的 CSS 是基于 Bootstrap 定制的，看得不爽的地方直接在 Less 里改就好了（平时更习惯 SCSS 些），&lt;strong&gt;不过其实我一直觉得 Bootstrap 在移动端的体验做得相当一般，比我在淘宝参与的团队 CSS 框架差多了……&lt;/strong&gt;所以为了体验，也补了不少 CSS 进去&lt;/p&gt;
 
 &lt;p&gt;最后就进入了耗时反而最长的&lt;strong&gt;做图、写字&lt;/strong&gt;阶段，也算是进入了&lt;strong&gt;写博客&lt;/strong&gt;的正轨，因为是类似 Hack Day 的方式去搭这个站的，所以折腾折腾着大半夜就过去了。&lt;/p&gt;
 
-&lt;p&gt;第二天考虑中文字体的渲染，fork 了 &lt;a href=&quot;http://www.typeisbeautiful.com/&quot;&gt;Type is Beautiful&lt;/a&gt; 的 &lt;code&gt;font&lt;/code&gt; CSS，调整了字号，适配了 Win 的渣渲染，中英文混排效果好多了。&lt;/p&gt;
+&lt;p&gt;第二天考虑中文字体的渲染，fork 了 &lt;a href=&quot;http://www.typeisbeautiful.com/&quot;&gt;Type is Beautiful&lt;/a&gt; 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;font&lt;/code&gt; CSS，调整了字号，适配了 Win 的渣渲染，中英文混排效果好多了。&lt;/p&gt;
 
 &lt;h2 id=&quot;section-2&quot;&gt;后记&lt;/h2&gt;
 
