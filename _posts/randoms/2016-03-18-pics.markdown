@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Some Art by Apachennov"
+title:  "pics"
 date:   2016-03-18 23:25:49 +0800
 tags: randoms
 ---
 
-####Some beautiful and meaningful pics by [***Apachennov***][origin].
+pics by [***Apachennov***][origin].
 
 #### Hope you like it.
 
