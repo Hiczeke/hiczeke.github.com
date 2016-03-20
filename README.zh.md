@@ -193,7 +193,7 @@ disqus_username: _你的用户名_
 
 ```
 # Baidu Analytics
-ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+ba_track_id: 003465afb0f3a0837cec28e4ac071641
 
 # Google Analytics
 ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx

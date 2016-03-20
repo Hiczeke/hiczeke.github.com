@@ -1,5 +1,5 @@
 # Site settings
-title: Lance's Blog
+title: Lance Blog
 SEOTitle: 某人的博客 | Hiczeke
 header-img: img/post-bg-2015.jpg
 email: 836462432@qq.com
@@ -42,7 +42,7 @@ kramdown:
 # Disqus settings
 #disqus_username: _your_disqus_short_name_
 
-# Duoshuo settings
+# Duoshuo settings 评论
 duoshuo_username: Hiczeke
 # Share component is depend on Comment so we can NOT use share only.
 duoshuo_share: true                     # set to false if you want to use Comment without Sharing
@@ -50,7 +50,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 
 
 
-# Analytics settings
+# Analytics settings 百度统计
 # Baidu Analytics
 ba_track_id: 003465afb0f3a0837cec28e4ac071641
 # Google Analytics
@@ -59,7 +59,7 @@ ba_track_id: 003465afb0f3a0837cec28e4ac071641
 
 
 
-# Sidebar settings
+# Sidebar settings  小个人信息
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "在校学生"
 sidebar-avatar: /img/hiczeke.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
@@ -75,20 +75,20 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
+        title: "Lance",
+        href: "http://hiczeke.com"
     },{
-        title: "Foo",
-        href: "#"
+        #title: "baidu",
+        #href: "http://baidu.com"
     },{
-        title: "Bar",
-        href: "#"
+        #title: "Bar",
+        #href: "#"
     },{
-        title: "Example Friends",
-        href: "#"
+        #title: "Example Friends",
+        #href: "#"
     },{
-        title: "It helps SEO",
-        href: "#"
+        #title: "It helps SEO",
+        #href: "#"
     }
 ]
 
