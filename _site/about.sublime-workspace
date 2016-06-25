@@ -1,0 +1,254 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Ma",
+				"Matrix"
+			],
+			[
+				"fo",
+				"from"
+			],
+			[
+				"gol",
+				"gold_room"
+			],
+			[
+				"bear",
+				"bear_moved"
+			],
+			[
+				"fru",
+				"fruits"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 87.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/lanwoo/Downloads/random/实验3-student/objdump",
+		"/Applications/Sublime Text.app/Contents/MacOS/Packages/Monokai.tmTheme",
+		"/Users/lanwoo/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/lanwoo/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/lanwoo/Downloads/mxnet2/example/neural-style1/run.py",
+		"/Users/lanwoo/lan_whatthehellisthat/lan_whatthehellisthat.xcodeproj/project.pbxproj",
+		"/Users/lanwoo/Downloads/java../MyServer2.java",
+		"/Users/lanwoo/Downloads/random/csass/datalab-handout/btest.c",
+		"/Users/lanwoo/hiczeke.github.com/about.html",
+		"/Users/lanwoo/hiczeke.github.com/_config.yml",
+		"/Users/lanwoo/Downloads/wxPython3.0-osx-cocoa-py2.7.pkg/Contents/Resources/postflight",
+		"/Users/lanwoo/Downloads/mxnet2/example/image-classification/run.py",
+		"/Users/lanwoo/Downloads/mxnet2/example/image-classification/symbol_vgg.py",
+		"/Users/lanwoo/Desktop/计算机伦理案例分析",
+		"/Users/lanwoo/Downloads/random/csass/datalab-handout/bits.c",
+		"/Users/lanwoo/Downloads/datalab-handout/bits.c",
+		"/Users/lanwoo/NetBeansProjects/JavaApplication1/demo.html",
+		"/Users/lanwoo/Downloads/random/Code/bomblab /bomb.c",
+		"/Users/lanwoo/Downloads/random/Code/ascii.py",
+		"/Users/lanwoo/Desktop/讲个故事",
+		"/Users/lanwoo/Downloads/learnpythonthehardway/ex39.py",
+		"/Users/lanwoo/Downloads/learnpythonthehardway/ex35.py",
+		"/Users/lanwoo/Downloads/learnpythonthehardway/ex33.py",
+		"/Users/lanwoo/Downloads/learnpythonthehardway/ex32.py"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"new",
+			"new add",
+			"new",
+			"c_predict_api.h",
+			"Accelerate.framework",
+			"libc++",
+			"imageViewPhoto",
+			"cdef",
+			"cdefs",
+			"c'de'f",
+			"phase_1",
+			"main",
+			"$2",
+			"return",
+			"  //",
+			"。",
+			".",
+			"而事实是袁世凯当时立即起用陆征祥为外交总长，一面与日本代表进行正面交涉，一面派人到日本寻求该国政坛元老帮助，还故意散布消息，获得国内外舆论支持。之后日本调动了军队对中国威胁恫吓"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 269.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "about.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Downloads/learnpythonthehardway/ex32.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

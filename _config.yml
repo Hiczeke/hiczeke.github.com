@@ -61,8 +61,8 @@ ba_track_id: 003465afb0f3a0837cec28e4ac071641
 
 # Sidebar settings  小个人信息
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Weirdo,  Student"
-sidebar-avatar: /img/hiczeke.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: " Student"
+sidebar-avatar: /img/fun2.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
